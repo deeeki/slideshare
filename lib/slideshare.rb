@@ -1,5 +1,9 @@
-require "slideshare/version"
+require 'slideshare/api'
+require 'slideshare/request'
+require 'slideshare/version'
 
 module Slideshare
-  # Your code goes here...
+  extend Slideshare::API
 end
+
+Slideshare.setup
