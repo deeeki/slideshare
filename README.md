@@ -17,12 +17,15 @@ And then execute:
 
 ## Setting
 
-    Slideshare.configure do |config|
-      config.api_key = 'your_api_key'
-      config.shared_secret = 'your_shared_secret'
-    end
+Set `SLIDESHARE_API_KEY` and `SLIDESHARE_SHARED_SECRET` environment variables.
 
-Alternately, you can set `SLIDESHARE_API_KEY` and `SLIDESHARE_SHARED_SECRET` environment variables.
+With Rails, these are set automaticallly.
+Without Rails, call `Slideshare.setup` explicitly before using.
+
+Alternately, you can set directly.
+
+    Slideshare.api_key = 'your_api_key'
+    Slideshare.shared_secret = 'your_shared_secret'
 
 ## Usage
 
