@@ -11,8 +11,8 @@ module Slideshare
     attr_accessor :api_key, :shared_secret
 
     def setup
-      @api_key ||= ENV['SLIDESHARE_API_KEY']
-      @shared_secret ||= ENV['SLIDESHARE_SHARED_SECRET']
+      @api_key, @shared_secret = ENV['SLIDESHARE_API_KEY'], ENV['SLIDESHARE_SHARED_SECRET']
+      [@api_key, @shared_secret].all?
     end
 
     def get_slideshow params = {}
