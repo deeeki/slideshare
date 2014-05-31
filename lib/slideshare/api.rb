@@ -15,11 +15,6 @@ module Slideshare
       @shared_secret ||= ENV['SLIDESHARE_SHARED_SECRET']
     end
 
-    def configure
-      yield self
-      self
-    end
-
     def get_slideshow params = {}
       get('/get_slideshow', params)
     end
