@@ -6,4 +6,8 @@ module Slideshare
   extend Slideshare::API
 end
 
-Slideshare.setup
+begin
+  require 'rails'
+  require_relative 'slideshare/railtie'
+rescue LoadError
+end
